@@ -22,6 +22,7 @@ public class RunnableDemo {
         //Using a lambda expression in a Thread constructor
         /*new Thread(() -> System.out.println("inside Thread constructor using lambda")).start();*/
 
+        //Assigning a lambda expression to a variable
         Runnable r = () -> System.out.println("lambda expression implementing the run method");
         new Thread(r).start();
     }
