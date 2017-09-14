@@ -1,6 +1,7 @@
 package example_1;
 
 import java.io.File;
+import java.util.Arrays;
 
 /**
  * Project: ModenJavaRecipes
@@ -14,7 +15,9 @@ import java.io.File;
 public class AnonymousInner {
     public static void main(String[] args) {
         File directory = new File("./src/example_1");
-        String[] names = directory.list((File dir, String name) -> name.endsWith(".java"));
-
+        String[] names = directory.list((File dir, String name) -> {
+            return name.endsWith(".java");
+        });
+        System.out.println(Arrays.asList(names));
     }
 }
