@@ -11,6 +11,7 @@ package exanple_1;
  */
 public class RunnableDemo {
     public static void main(String[] args) {
+        //Anonymous inner class implementation of Runnable
         /*new Thread(new Runnable() {
             @Override
             public void run() {
@@ -18,6 +19,10 @@ public class RunnableDemo {
             }
         }).start();*/
 
-        new Thread(() -> System.out.println("inside runnable using an anonymous inner class")).start();
+        //Using a lambda expression in a Thread constructor
+        /*new Thread(() -> System.out.println("inside Thread constructor using lambda")).start();*/
+
+        Runnable r = () -> System.out.println("lambda expression implementing the run method");
+        new Thread(r).start();
     }
 }
