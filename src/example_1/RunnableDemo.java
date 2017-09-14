@@ -1,4 +1,4 @@
-package exanple_1;
+package example_1;
 
 /**
  * Project: ModenJavaRecipes
