@@ -15,12 +15,14 @@ import java.util.stream.Collectors;
  */
 public class Example1_13 {
     public static void main(String[] args) {
-        List<String> names = people.stream()
-                .map(person -> person.getName())
+        List<String> names = Arrays.asList("하데스", "뽀로로", "옥터넛", "번개맨", "아이쿠");
+
+        List<Person> people = names.stream()
+                .map(name -> new Person(name)) //Using a lambda expression to invoke the constructor
                 .collect(Collectors.toList());
 
-        List<String> names = people.stream()
-                .map(Person::getName)
+        List<Person> people1 = names.stream()
+                .map(Person::new)  //Using a constructor reference instantiating Person
                 .collect(Collectors.toList());
     }
 }
