@@ -19,4 +19,8 @@ public class Person {
         this.name = name;
     }
 
+    public Person(Person p) {
+        this.name = p.name;
+    }
+
 }
