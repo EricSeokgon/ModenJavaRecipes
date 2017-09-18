@@ -1,11 +1,14 @@
 package example_1;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 /**
  * Project: ModenJavaRecipes
@@ -17,7 +20,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * To change this template use File | Settings | File Templates.
  */
 class Example1_17Test {
-    public Example1_17Test() {
+    @Test
+    void SameObjectTest() {
         Person before = new Person("하데스");
 
         List<Person> people = Stream.of(before)
