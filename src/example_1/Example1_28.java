@@ -22,6 +22,7 @@ public class Example1_28 {
         List<String> sorted = bonds.stream()
                 .sorted(Comparator.naturalOrder())
                 .collect(Collectors.toList());
+
         //Reverse lexicographical
         sorted = bonds.stream()
                 .sorted(Comparator.reverseOrder())
@@ -37,7 +38,7 @@ public class Example1_28 {
                 .sorted(Comparator.comparingInt(String::length))
                 .collect(Collectors.toList());
 
-        //Sort name length
+        //Sort name length, then equal lengths lexicographically
         sorted = bonds.stream()
                 .sorted(Comparator.comparingInt(String::length)
                         .thenComparing(Comparator.naturalOrder()))
