@@ -15,8 +15,8 @@ import java.util.List;
 public class Example1_27 {
     public static void main(String[] args) {
         List<Integer> nums = Arrays.asList(3, 1, 4, 1, 5, 9);
-        boolean removed = nums.removeIf(n -> n <= 0);
+        boolean removed = nums.removeIf(n -> n <= 0); //use the default method removeIF from collection
         System.out.println("Elements were " + (removed ? "" : "NOT") + " removed");
-        nums.forEach(System.out::println);
+        nums.forEach(System.out::println); //use the default method forEach from Iterator
     }
 }
