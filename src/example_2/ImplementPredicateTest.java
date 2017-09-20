@@ -30,8 +30,13 @@ public class ImplementPredicateTest {
     }
 
     @Test
-    public void getnamesOfLength3() throws Exception {
+    public void getnamesOfLength5() throws Exception {
         assertEquals("Crong, Hades", demo1.getNameOfLength(5, names));
+    }
+
+    @Test
+    public void getNamesStartingWithS() throws Exception {
+        assertEquals("", demo2.getNamesStartingWith("S", names));
     }
 
 }
