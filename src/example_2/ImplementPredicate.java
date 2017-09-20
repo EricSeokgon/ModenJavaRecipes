@@ -20,4 +20,7 @@ public class ImplementPredicate {
                 .filter(condition)
                 .collect(Collectors.joining(", "));
     }
+
+    public static final Predicate<String> LENGTH_FIVE = s -> s.length() == 5;
+    public static final Predicate<String> STARTS_WITH_S = s -> s.startsWith("S");
 }
