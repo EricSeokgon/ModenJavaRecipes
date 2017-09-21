@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import java.util.stream.Stream;
 
+import static example_2.ImplementPredicate.LENGTH_FIVE;
+import static example_2.ImplementPredicate.STARTS_WITH_S;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -24,19 +26,43 @@ public class ImplementPredicateTest {
 
     @Before
     public void setUp() {
-        names = Stream.of("Hades", "Pororo", "Crong", "Edi", "lupy")
+        names = Stream.of("Mal", "Wash", "Kaylee", "Inara", "Zoë",
+                "Jayne", "Simon", "River", "Shepherd Book")
                 .sorted()
                 .toArray(String[]::new);
     }
 
     @Test
     public void getnamesOfLength5() throws Exception {
-        assertEquals("Crong, Hades", demo1.getNameOfLength(5, names));
+        assertEquals("Inara, Jayne, River, Simon", demo1.getNameOfLength(5, names));
     }
 
     @Test
     public void getNamesStartingWithS() throws Exception {
-        assertEquals("", demo2.getNamesStartingWith("S", names));
+        assertEquals("Shepherd Book, Simon", demo2.getNamesStartingWith("S", names));
     }
 
+    @Test
+    public void getNamesSatisfyingCondition() throws Exception {
+        assertEquals("Inara, Jayne, River, Simon",
+                demo.getNamesSatisfyingCondition(s -> s.length() == 5, names));
+        assertEquals("Shepherd Book, Simon",
+                demo.getNamesSatisfyingCondition(s -> s.startsWith("S"),
+                        names));
+        assertEquals("Inara, Jayne, River, Simon",
+                demo.getNamesSatisfyingCondition(LENGTH_FIVE, names));
+        assertEquals("Shepherd Book, Simon",
+                demo.getNamesSatisfyingCondition(STARTS_WITH_S, names));
+    }
+    @Test
+    public void composedPredicate() throws Exception {
+        assertEquals("Simon",
+                demo.getNamesSatisfyingCondition(
+                        LENGTH_FIVE.and(STARTS_WITH_S), names));
+        assertEquals("Inara, Jayne, River, Shepherd Book, Simon",
+                demo.getNamesSatisfyingCondition(
+                        LENGTH_FIVE.or(STARTS_WITH_S), names));
+        assertEquals("Kaylee, Mal, Shepherd Book, Wash, Zoë",
+                demo.getNamesSatisfyingCondition(LENGTH_FIVE.negate(), names));
+    }
 }
