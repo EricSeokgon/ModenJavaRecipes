@@ -26,8 +26,8 @@ public class ImplementPredicateTest {
 
     @Before
     public void setUp() {
-        names = Stream.of("Mal", "Wash", "Kaylee", "Inara", "Zoë",
-                "Jayne", "Simon", "River", "Shepherd Book")
+        names = Stream.of("Alpha", "Delta", "Hotel", "Bravo", "Kilo",
+                "Echo", "Charlie", "Lima", "Mike")
                 .sorted()
                 .toArray(String[]::new);
     }
