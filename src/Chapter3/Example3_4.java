@@ -1,6 +1,7 @@
 package Chapter3;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -20,5 +21,9 @@ public class Example3_4 {
                 .limit(10)
                 .collect(Collectors.toList());
         System.out.println(nums);
+
+        Stream.iterate(LocalDate.now(), Id -> Id.plusDays(1L))
+                .limit(10)
+                .forEach(System.out::println);
     }
 }
