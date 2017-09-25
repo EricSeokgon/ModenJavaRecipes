@@ -1,4 +1,4 @@
-package example_1;
+package Chapter1;
 
 import java.util.function.Consumer;
 import java.util.stream.Stream;

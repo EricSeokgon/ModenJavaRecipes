@@ -1,4 +1,4 @@
-package example_1;
+package Chapter1;
 
 /**
  * Project: ModenJavaRecipes

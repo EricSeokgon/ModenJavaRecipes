@@ -1,4 +1,4 @@
-package example_2;
+package Chapter2;
 
 import java.util.function.DoubleSupplier;
 import java.util.logging.Logger;

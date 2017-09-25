@@ -1,12 +1,12 @@
-package example_2;
+package Chapter2;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.stream.Stream;
 
-import static example_2.ImplementPredicate.LENGTH_FIVE;
-import static example_2.ImplementPredicate.STARTS_WITH_S;
+import static Chapter2.ImplementPredicate.LENGTH_FIVE;
+import static Chapter2.ImplementPredicate.STARTS_WITH_S;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
