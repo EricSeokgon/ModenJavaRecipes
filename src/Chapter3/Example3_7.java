@@ -3,6 +3,7 @@ package Chapter3;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 /**
  * Project: ModenJavaRecipes
@@ -19,5 +20,10 @@ public class Example3_7 {
                 .boxed()
                 .collect(Collectors.toList());
         System.out.println(ints);
+
+        List<Long> longs = LongStream.rangeClosed(10, 15)
+                .boxed()
+                .collect(Collectors.toList());
+        System.out.println(longs);
     }
 }
