@@ -16,7 +16,7 @@ import java.util.stream.IntStream;
 public class Example3_9 {
     public static void main(String[] args) {
         List<Integer> ints = IntStream.of(3, 1, 4, 1, 5, 9)
-                .boxed()
+                .mapToObj(Integer::valueOf)
                 .collect(Collectors.toList());
     }
 }
