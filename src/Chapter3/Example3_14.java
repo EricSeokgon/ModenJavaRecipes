@@ -18,5 +18,11 @@ public class Example3_14 {
                 .map(String::length)
                 .count();
         System.out.println("There are " + count + " strings");
+
+        int totalLength = Arrays.stream(strings)
+                .mapToInt(String::length)
+                .sum();
+        System.out.println("The total length  is " + totalLength);
+
     }
 }
