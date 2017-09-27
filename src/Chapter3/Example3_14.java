@@ -1,6 +1,8 @@
 package Chapter3;
 
 import java.util.Arrays;
+import java.util.OptionalDouble;
+import java.util.OptionalInt;
 
 /**
  * Project: ModenJavaRecipes
@@ -23,6 +25,19 @@ public class Example3_14 {
                 .mapToInt(String::length)
                 .sum();
         System.out.println("The total length  is " + totalLength);
+
+        OptionalDouble ave = Arrays.stream(strings)
+                .mapToInt(String::length)
+                .average();
+        System.out.println("The average length is " + ave);
+
+        OptionalInt max = Arrays.stream(strings)
+                .mapToInt(String::length)
+                .max();
+        OptionalInt min = Arrays.stream(strings)
+                .mapToInt(String::length)
+                .min();
+        System.out.println("The max and min lengths are " + max + " and " + min);
 
     }
 }
