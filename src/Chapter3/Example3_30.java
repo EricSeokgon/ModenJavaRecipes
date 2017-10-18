@@ -22,5 +22,7 @@ public class Example3_30 {
         List<String> sorted = strings.stream()
                 .sorted(Comparator.comparingInt(String::length))
                 .collect(toList());
+
+        System.out.println(sorted);
     }
 }
