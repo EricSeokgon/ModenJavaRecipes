@@ -15,10 +15,11 @@ import java.util.stream.Stream;
 public class Example3_49 {
     public Integer delay(Integer n) {
         try {
-            Thread.sleep((long) (Math.random() * 100);
+            Thread.sleep((long) (Math.random() * 100));
         } catch (InterruptedException ignored) {
 
-        } return n;
+        }
+        return n;
     }
 
 
