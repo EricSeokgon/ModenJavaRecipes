@@ -13,4 +13,7 @@ public class Book {
     private int id;
     private String name;
     private double price;
+
+    public Book(int i, String modern_java_recipes, double v) {
+    }
 }
