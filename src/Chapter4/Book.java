@@ -16,4 +16,8 @@ public class Book {
 
     public Book(int i, String modern_java_recipes, double v) {
     }
+
+    public int getId() {
+        return id;
+    }
 }
