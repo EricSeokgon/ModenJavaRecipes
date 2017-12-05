@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 import static Chapter2.ImplementPredicate.LENGTH_FIVE;
 import static Chapter2.ImplementPredicate.STARTS_WITH_S;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Project: ModenJavaRecipes
