@@ -2,6 +2,8 @@ package Chapter5;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 /**
  * Project: ModenJavaRecipes
@@ -17,5 +19,7 @@ public class Example5_1 {
         List<String> strings = Arrays.asList(
                 "this", null, "is", "a", null, "list", "of", "strings", null);
         List<String> nonNullStrings = strings.stream()
+                .filter(Objects::nonNull)
+                .collect(Collectors.toList());
     }
 }
