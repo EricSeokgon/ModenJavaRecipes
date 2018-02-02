@@ -12,7 +12,7 @@ import java.util.function.Function;
  * To change this template use File | Settings | File Templates.
  */
 public class Example5_40 {
-    private static <T, R, E extends Exception>
+    static <T, R, E extends Exception>
     Function<T, R> wrapper(FunctionWithException<T, R, E> fe) {
         return arg -> {
             try {
