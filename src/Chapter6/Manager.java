@@ -10,4 +10,11 @@ package Chapter6;
  * To change this template use File | Settings | File Templates.
  */
 public class Manager {
+    private String name;
+    public Manager(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
 }
