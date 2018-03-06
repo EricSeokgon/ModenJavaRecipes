@@ -17,7 +17,7 @@ import java.util.stream.Stream;
  */
 public class Example7_1 {
     public static void main(String[] args) {
-        try (Stream<String> lines = Files.lines(Paths.get("/usr/share/dict/web2")) {
+        try (Stream<String> lines = Files.lines(Paths.get("C:\\aaUsers\\user\\IdeaProjects\\ModenJavaRecipes\\src\\Chapter7\\Example7_1.java"))) {
             lines.filter(s -> s.length() > 20)
                     .sorted(Comparator.comparingInt(String::length).reversed())
                     .limit(10)
