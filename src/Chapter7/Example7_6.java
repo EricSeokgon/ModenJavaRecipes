@@ -17,7 +17,7 @@ import java.util.stream.Stream;
  */
 public class Example7_6 {
     public static void main(String[] args) {
-        try (Stream<Path> list = Files.list(Paths.get("C:\\Users\\user\\IdeaProjects\\ModenJavaRecipes\\src\\Chapter7\\Example7_6.java"))) {
+        try (Stream<Path> list = Files.list(Paths.get("C:\\Users\\user\\IdeaProjects\\ModenJavaRecipes\\src\\Chapter7"))) {
             list.forEach(System.out::println);
         } catch (IOException e) {
             e.printStackTrace();
