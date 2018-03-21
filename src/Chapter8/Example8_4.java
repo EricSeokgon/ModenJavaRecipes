@@ -17,9 +17,9 @@ import java.time.ZonedDateTime;
 public class Example8_4 {
     public static void main(String[] args) {
         LocalDateTime dateTime = LocalDateTime.of(2017, Month.JULY, 4, 13, 20, 10);
-        ZonedDateTime nyc = dateTime.atZone(ZoneId.of("America/New_York"));
+        ZonedDateTime nyc = dateTime.atZone(ZoneId.of("Asia/Shanghai"));
         System.out.println(nyc);
-        ZonedDateTime london = nyc.withZoneSameInstant(ZoneId.of("Europe/London"));
+        ZonedDateTime london = nyc.withZoneSameInstant(ZoneId.of("Asia/Tokyo"));
         System.out.println(london);
     }
 }
