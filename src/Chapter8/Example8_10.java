@@ -28,5 +28,6 @@ public class Example8_10 {
         assertEquals("2017-02-09T11:30", end.toString());
         end = start.with(TemporalAdjusters.previousOrSame(DayOfWeek.THURSDAY));
         assertEquals("2017-02-02T11:30", end.toString());
+
     }
 }
