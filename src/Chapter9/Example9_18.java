@@ -4,7 +4,7 @@ import java.util.concurrent.AbstractExecutorService;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-public class Examaple9_18 {
+public class Example9_18 {
     public static void main(String[] args) {
         AbstractExecutorService service = null;
         Future future = service.submit(() -> {
