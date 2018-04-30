@@ -23,7 +23,7 @@ public class Example9_21 {
         } catch (ExecutionException e) {
             assertEquals(ExecutionException.class, e.getClass());
             assertEquals(RuntimeException.class, e.getCause().getClass());
+
         }
     }
-
 }
