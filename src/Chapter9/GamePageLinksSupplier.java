@@ -15,6 +15,7 @@ public class GamePageLinksSupplier implements Supplier<List<String>> {
     public GamePageLinksSupplier(LocalDate startDate, int days) {
         this.startDate = startDate;
         this.days = days;
+
     }
 
     public List<String> getGamePageLinks(LocalDate localDate) {
