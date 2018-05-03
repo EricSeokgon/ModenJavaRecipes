@@ -41,5 +41,6 @@ public class Example10_15 {
         javaMap.forEach((name, url) -> assertTrue(
                 jvmLanguages.keySet().contains(name) &&
                         jvmLanguages.values().contains(url)));
+
     }
 }
