@@ -23,4 +23,8 @@ public class NamesSupplier implements Supplier<Stream<String>> {
             return null;
         }
     }
+
+    public Object get(int id) {
+        return null;
+    }
 }
